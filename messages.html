@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liora — Mensagens</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="layout">
+    <div id="sidebar" data-page="messages"></div>
+    <main class="main">
+      <div id="appbar" data-title="Mensagens" data-title-en="Messages"
+           data-sub="Cada um fala o seu idioma · a Liora ajuda em cada conversa" data-sub-en="Everyone speaks their language · Liora helps in every chat"></div>
+
+      <div class="content">
+        <div class="inbox">
+
+          <!-- CONVERSATION LIST -->
+          <div class="convo-list">
+            <div class="cl-head">
+              <h3 data-en="Messages">Mensagens</h3>
+              <p><span data-en="5 conversations · 2 unread">5 conversas · 2 não lidas</span></p>
+            </div>
+
+            <div class="convo active" data-convo="liora">
+              <span class="av" style="background:linear-gradient(150deg,#5A6B57,#3f4b3d)">L</span>
+              <div class="cmid">
+                <div class="nm"><span data-en="Liora Assistant">Assistente Liora</span></div>
+                <div class="role" data-en="AI · general & case questions">IA · perguntas gerais e do seu caso</div>
+                <div class="preview" data-en="Updated your profile — Joost & Helena notified.">Atualizei seu perfil — Joost e Helena avisados.</div>
+              </div>
+              <div class="cmeta"><span class="tm">14:30</span></div>
+            </div>
+
+            <div class="convo" data-convo="joost">
+              <span class="av" style="background:linear-gradient(150deg,#7E6A86,#5d4f64)">J</span>
+              <div class="cmid">
+                <div class="nm"><span>Joost Bakker</span><span class="lang-flag">🇳🇱</span></div>
+                <div class="role" data-en="Accountant · taxes">Contador · impostos</div>
+                <div class="preview"><span class="said">Zal ik de eenmanszaak inschrijven?</span><span class="xlate"><span class="tx" data-en="Shall I register the sole proprietorship?">Faço o registo da eenmanszaak?</span></span></div>
+              </div>
+              <div class="cmeta"><span class="tm">11:20</span><span class="unread"></span></div>
+            </div>
+
+            <div class="convo" data-convo="marieke">
+              <span class="av" style="background:linear-gradient(150deg,#6E7E8A,#4f5a62)">M</span>
+              <div class="cmid">
+                <div class="nm"><span>Marieke de Vries</span><span class="lang-flag">🇬🇧</span></div>
+                <div class="role" data-en="Immigration lawyer">Advogada de imigração</div>
+                <div class="preview"><span class="said">There's a one-year orientation permit after you graduate.</span><span class="xlate"><span class="tx" data-en="There's a one-year orientation permit after you graduate.">Há um visto de um ano para procurar trabalho após formar.</span></span></div>
+              </div>
+              <div class="cmeta"><span class="tm" data-en="yest.">ontem</span><span class="unread"></span></div>
+            </div>
+
+            <div class="convo" data-convo="helena">
+              <span class="av" style="background:linear-gradient(150deg,#9A7B45,#6f5930)">H</span>
+              <div class="cmid">
+                <div class="nm"><span>Helena Costa</span><span class="lang-flag">🇧🇷</span></div>
+                <div class="role" data-en="Financial advisor">Consultora financeira</div>
+                <div class="preview" data-en="Adjusted your transfer limit (+15%).">Ajustei o seu limite de transferência (+15%).</div>
+              </div>
+              <div class="cmeta"><span class="tm">16:05</span></div>
+            </div>
+
+            <div class="convo" data-convo="daan">
+              <span class="av" style="background:linear-gradient(150deg,#B0714F,#834f33)">D</span>
+              <div class="cmid">
+                <div class="nm"><span>Daan Visser</span><span class="lang-flag">🇳🇱</span></div>
+                <div class="role" data-en="Real-estate agent">Corretor imobiliário</div>
+                <div class="preview"><span class="said">Ik neem beide opties mee naar de bezichtiging.</span><span class="xlate"><span class="tx" data-en="I'll bring both options to the viewing.">Levo as duas opções para a visita.</span></span></div>
+              </div>
+              <div class="cmeta"><span class="tm" data-en="Mon">seg</span></div>
+            </div>
+          </div>
+
+          <!-- THREAD PANE -->
+          <div class="thread-pane">
+
+            <!-- ===== LIORA (AI assistant) ===== -->
+            <div class="tp active" data-convo="liora">
+              <div class="tp-head">
+                <button class="thread-back" aria-label="Voltar">‹</button>
+                <span class="av" style="background:linear-gradient(150deg,#5A6B57,#3f4b3d)">L</span>
+                <div class="who"><b data-en="Liora Assistant">Assistente Liora</b><div class="role" data-en="AI · general & case questions">IA · perguntas gerais e do seu caso</div></div>
+              </div>
+              <div class="tp-thread">
+                <div class="msg them"><div class="bubble" data-en="Hi Sofia! I'm your assistant. I can answer general questions or ones specific to your case right away — without waiting for a professional.">Oi Sofia! Sou a sua assistente. Posso responder perguntas gerais ou específicas do seu caso na hora — sem precisar esperar um profissional.</div><span class="time" data-en="yest.">ontem</span></div>
+
+                <div class="msg me"><div class="bubble" data-en="How much is tenant insurance here, usually?">Quanto costuma custar um seguro de inquilino aqui?</div><span class="time" data-en="yest.">ontem</span></div>
+                <div class="msg them"><div class="bubble" data-en-html="In Amsterdam it's usually between <span data-eur='10'></span> and <span data-eur='15'></span>/mo for a flat like yours. Helena can set it up together with your account.">Em Amsterdã costuma ficar entre <span data-eur="10"></span> e <span data-eur="15"></span>/mês para um apê como o seu. A Helena pode contratar junto com a sua conta.</div><span class="time" data-en="yest.">ontem</span></div>
+
+                <div class="msg me"><div class="bubble" data-en="And health insurance — is it mandatory?">E seguro de saúde — é obrigatório?</div><span class="time" data-en="yest.">ontem</span></div>
+                <div class="msg them"><div class="bubble" data-en="It is, in the Netherlands — you have up to 4 months after arriving to take it out. I can ask Helena for a recommendation whenever you like.">É, sim, nos Países Baixos — você tem até 4 meses após chegar para contratar. Posso pedir uma recomendação à Helena quando quiser.</div><span class="time" data-en="yest.">ontem</span></div>
+
+                <div class="msg me"><div class="bubble" data-en="I renegotiated my contract based on the cost of living you showed me — my pay goes up 15%.">Renegociei meu contrato com base no custo de vida que vocês me mostraram — meu salário sobe 15%.</div><span class="time">14:29</span></div>
+                <div class="msg them"><div class="bubble" data-en-html="That's great. I updated your profile: income +15% and budget raised to <span data-eur='2180'></span>/mo. I notified Joost (it changes the tax estimate) and Helena (transfers).">Que ótimo. Atualizei o seu perfil: renda +15% e orçamento elevado para <span data-eur="2180"></span>/mês. Avisei o Joost (muda a estimativa de imposto) e a Helena (transferências).</div><span class="time">14:30</span></div>
+                <div class="chip-extracted"><span class="ico">◆</span><span data-en="Profile updated · income +15% · Joost & Helena notified">Perfil atualizado · renda +15% · Joost e Helena avisados</span></div>
+              </div>
+              <form class="composer" data-chat="generic">
+                <input type="text" placeholder="Escreva uma mensagem…" data-ph-en="Write a message…" aria-label="Mensagem">
+                <button type="submit" class="send" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+              </form>
+            </div>
+
+            <!-- ===== JOOST (accountant · Dutch) — AI woven in ===== -->
+            <div class="tp" data-convo="joost">
+              <div class="tp-head">
+                <button class="thread-back" aria-label="Voltar">‹</button>
+                <span class="av" style="background:linear-gradient(150deg,#7E6A86,#5d4f64)">J</span>
+                <div class="who"><b>Joost Bakker</b><div class="role" data-en="Accountant · writes in Dutch 🇳🇱">Contador · escreve em neerlandês 🇳🇱</div></div>
+              </div>
+              <div class="tp-thread">
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Hallo Sofia. Ik heb je Liora-briefing — studentenvisum, freelance-inkomsten uit Brazilië. Ben je hier fiscaal inwoner geworden?</span>
+                  <span class="xlate"><span class="tx" data-en="Hello Sofia. I have your Liora brief — student visa, freelance income from Brazil. Did you become a tax resident here?">Olá Sofia. Tenho o seu briefing da Liora — visto de estudante, renda freelance do Brasil. Você passou a ser residente fiscal aqui?</span></span>
+                </div><span class="time">11:02</span></div>
+
+                <div class="msg me"><div class="bubble" data-en="Hi Joost! I arrived in September and plan to stay 2+ years — so yes. My clients are still in Brazil.">Oi Joost! Cheguei em setembro e pretendo ficar 2+ anos — então sim. Meus clientes continuam no Brasil.</div><span class="time">11:03</span></div>
+
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Als inwoner belast Nederland je wereldwijde inkomen — maar het verdrag Brazilië–NL voorkomt dat je twee keer over hetzelfde bedrag betaalt.</span>
+                  <span class="xlate"><span class="tx" data-en="As a resident, the Netherlands taxes your worldwide income — but the Brazil–NL treaty prevents you paying twice on the same amount.">Como residente, os Países Baixos tributam a renda mundial — mas o acordo Brasil–PB evita que você pague duas vezes sobre o mesmo valor.</span></span>
+                </div><span class="time">11:05</span></div>
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Voor de aangifte heb ik twee gegevens nodig: je aankomstdatum en je nationaliteit.</span>
+                  <span class="xlate"><span class="tx" data-en="For the tax return I need two details: your arrival date and your nationality.">Para a declaração preciso de dois dados: a sua data de chegada e a sua nacionalidade.</span></span>
+                </div><span class="time">11:05</span></div>
+
+                <div class="msg me assisted"><div class="bubble" data-en="I arrived on 1 September 2025; Brazilian nationality.">Cheguei em 1 de setembro de 2025; nacionalidade brasileira.</div><span class="assisted-tag">◆ <span data-en="Answered by Liora · from your profile">Respondido pela Liora · do seu perfil</span></span></div>
+
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Perfect, ik heb het genoteerd. Dank je.</span>
+                  <span class="xlate"><span class="tx" data-en="Perfect, I've noted it. Thanks.">Perfeito, já anotei. Obrigado.</span></span>
+                </div><span class="time">11:06</span></div>
+
+                <div class="msg me"><div class="bubble" data-en="My freelance income last year was about R$ 90,000.">Minha renda freelance no ano passado foi cerca de R$ 90.000.</div><span class="time">11:07</span></div>
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Omgerekend tegen de gemiddelde koers is dat ongeveer <span data-eur="14500"></span> voor het jaar. Met de zelfstandigenaftrek schat ik de effectieve belasting rond <span data-eur="2300"></span>.</span>
+                  <span class="xlate"><span class="tx" data-en-html="Converted at the average rate that's about <span data-eur='14500'></span> for the year. With the first-year self-employment deduction I estimate effective tax near <span data-eur='2300'></span>.">Convertendo ao câmbio médio, são cerca de <span data-eur="14500"></span> no ano. Com a dedução de autônomo do primeiro ano, estimo imposto efetivo perto de <span data-eur="2300"></span>.</span></span>
+                </div><span class="time">11:08</span></div>
+
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Trouwens — Liora gaf door dat je inkomen dit jaar met 15% stijgt. Ik heb de schatting vooruit bijgewerkt: ongeveer <span data-eur="2640"></span>.</span>
+                  <span class="xlate"><span class="tx" data-en-html="By the way — Liora let me know your income rises 15% this year. I've updated the forward estimate: about <span data-eur='2640'></span>.">A propósito — a Liora me avisou que a sua renda sobe 15% este ano. Atualizei a estimativa para a frente: cerca de <span data-eur="2640"></span>.</span></span>
+                </div><span class="time">11:12</span></div>
+
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Zal ik de eenmanszaak deze maand inschrijven? Er is een eenmalige KvK-kost van <span data-eur="51"></span>.</span>
+                  <span class="xlate"><span class="tx" data-en-html="Shall I register the eenmanszaak this month? There's a one-off Chamber of Commerce fee of <span data-eur='51'></span>.">Faço o registo da eenmanszaak este mês? Há uma taxa única da Câmara de Comércio de <span data-eur="51"></span>.</span></span>
+                </div><span class="time">11:20</span></div>
+
+                <div class="draft-card" data-draft>
+                  <div class="dc-label">◆ <span data-en="Liora drafted a reply — review it">A Liora preparou uma resposta — revise</span></div>
+                  <div class="draft-text" data-en-html="Yes, please go ahead with the registration this month. I confirm the <span data-eur='51'></span> fee.">Sim, pode seguir com o registo este mês. Confirmo a taxa de <span data-eur="51"></span>.</div>
+                  <div class="dc-actions">
+                    <button class="primary" data-en="Approve & send" data-send-html-pt="Sim, pode seguir com o registo este mês. Confirmo a taxa de <span data-eur='51'></span>." data-send-html-en="Yes, please go ahead with the registration this month. I confirm the <span data-eur='51'></span> fee.">Aprovar e enviar</button>
+                    <button class="ghost" data-en="Edit">Editar</button>
+                  </div>
+                </div>
+
+                <div class="suggest-card" data-suggest>
+                  <div class="sc-label">◆ <span data-en="Liora suggestion">Sugestão da Liora</span></div>
+                  <p data-en="That 15% raise also affects your transfers — Helena has already adjusted your limit. Want to open the chat with her to confirm?">Esse aumento de 15% também afeta as suas transferências — a Helena já ajustou o seu limite. Quer abrir a conversa com ela para confirmar?</p>
+                  <div class="sc-actions">
+                    <button class="primary" data-go="helena" data-en="Open the chat with Helena →">Abrir a conversa com a Helena →</button>
+                    <button class="ghost" data-en="Not now">Agora não</button>
+                  </div>
+                </div>
+              </div>
+              <form class="composer" data-chat="generic">
+                <input type="text" placeholder="Responda ao Joost (em PT)…" data-ph-en="Reply to Joost (in PT)…" aria-label="Mensagem">
+                <button type="submit" class="send" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+              </form>
+            </div>
+
+            <!-- ===== MARIEKE (immigration · English) ===== -->
+            <div class="tp" data-convo="marieke">
+              <div class="tp-head">
+                <button class="thread-back" aria-label="Voltar">‹</button>
+                <span class="av" style="background:linear-gradient(150deg,#6E7E8A,#4f5a62)">M</span>
+                <div class="who"><b>Marieke de Vries</b><div class="role" data-en="Immigration lawyer · writes in English 🇬🇧">Advogada de imigração · escreve em inglês 🇬🇧</div></div>
+              </div>
+              <div class="tp-thread">
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Hi Sofia — I have your Liora brief: Brazilian passport, student visa, freelance income. Your visa allows limited freelancing as long as study stays primary.</span>
+                  <span class="xlate"><span class="tx" data-en="Hi Sofia — I have your Liora brief: Brazilian passport, student visa, freelance income. Your visa allows limited freelancing as long as study stays primary.">Oi Sofia — tenho o seu briefing da Liora: passaporte brasileiro, visto de estudante, renda freelance. Seu visto permite freelance limitado desde que o estudo continue como principal.</span></span>
+                </div><span class="time">10:40</span></div>
+
+                <div class="msg me"><div class="bubble" data-en="Yes, please prepare it. How many hours a week can I work?">Sim, por favor prepare. Quantas horas por semana eu posso trabalhar?</div><span class="time">10:44</span></div>
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Up to 16 hours a week during term, full-time over the summer. I'll send the work-hours annex to sign this week.</span>
+                  <span class="xlate"><span class="tx" data-en="Up to 16 hours a week during term, full-time over the summer. I'll send the work-hours annex to sign this week.">Até 16 horas por semana no período letivo, integral no verão. Envio o anexo de horas de trabalho para assinar esta semana.</span></span>
+                </div><span class="time">10:46</span></div>
+
+                <div class="msg me"><div class="bubble" data-en="And once I finish the master's — can I stay in the country?">E quando eu terminar o mestrado — posso continuar no país?</div><span class="time">10:48</span></div>
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Yes — graduates get a one-year "orientation year" (zoekjaar) permit to look for work, with full work rights. We'll apply for it close to your graduation.</span>
+                  <span class="xlate"><span class="tx" data-en="Yes — graduates get a one-year &quot;orientation year&quot; (zoekjaar) permit to look for work, with full work rights. We'll apply for it close to your graduation.">Sim — quem se forma tem direito a um visto de um ano (zoekjaar) para procurar trabalho, com plenos direitos de trabalho. Pedimos perto da sua formatura.</span></span>
+                </div><span class="time">10:50</span></div>
+                <div class="msg me"><div class="bubble" data-en="What a relief — thank you!">Que alívio — muito obrigada!</div><span class="time">10:51</span></div>
+              </div>
+              <form class="composer" data-chat="generic">
+                <input type="text" placeholder="Responda à Marieke (em PT)…" data-ph-en="Reply to Marieke (in PT)…" aria-label="Mensagem">
+                <button type="submit" class="send" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+              </form>
+            </div>
+
+            <!-- ===== HELENA (financial · Portuguese) ===== -->
+            <div class="tp" data-convo="helena">
+              <div class="tp-head">
+                <button class="thread-back" aria-label="Voltar">‹</button>
+                <span class="av" style="background:linear-gradient(150deg,#9A7B45,#6f5930)">H</span>
+                <div class="who"><b>Helena Costa</b><div class="role" data-en="Financial advisor · speaks Portuguese 🇧🇷">Consultora financeira · fala português 🇧🇷</div></div>
+              </div>
+              <div class="tp-thread">
+                <div class="msg them"><div class="bubble" data-en="Hi Sofia! I'm Helena, your financial advisor. I opened the checklist for your local bank account and set up BRL→EUR transfers with lower fees. Want me to add tenant insurance?">Oi Sofia! Sou a Helena, sua consultora financeira. Abri o checklist da sua conta no banco daqui e configurei as transferências BRL→EUR com menos taxa. Quer que eu inclua um seguro de inquilino?</div><span class="time">15:20</span></div>
+                <div class="msg me"><div class="bubble" data-en="Yes! What's the approximate cost?">Quero sim! Qual o custo aproximado?</div><span class="time">15:22</span></div>
+                <div class="msg them"><div class="bubble" data-en-html="Around <span data-eur='12'></span>/month — I'll arrange it together with the account.">Fica em torno de <span data-eur="12"></span>/mês — já deixo contratado junto com a conta.</div><span class="time">15:23</span></div>
+
+                <div class="msg them"><div class="bubble" data-en="By the way: Liora let me know your income went up 15%. I've already raised your monthly transfer limit and updated the IOF estimate.">A propósito: a Liora me avisou que a sua renda subiu 15%. Já aumentei o seu limite de transferência mensal e atualizei a estimativa de IOF.</div><span class="time">16:04</span></div>
+                <div class="msg me"><div class="bubble" data-en="Perfect! Could you send me the new summary?">Perfeito! Pode me mandar o novo resumo?</div><span class="time">16:05</span></div>
+                <div class="msg them"><div class="bubble" data-en="Sent to your email. Any change, Liora notifies me automatically.">Enviado para o seu e-mail. Qualquer mudança, a Liora me avisa automaticamente.</div><span class="time">16:05</span></div>
+              </div>
+              <form class="composer" data-chat="generic">
+                <input type="text" placeholder="Responda à Helena…" data-ph-en="Reply to Helena…" aria-label="Mensagem">
+                <button type="submit" class="send" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+              </form>
+            </div>
+
+            <!-- ===== DAAN (agent · Dutch) — assisted answer ===== -->
+            <div class="tp" data-convo="daan">
+              <div class="tp-head">
+                <button class="thread-back" aria-label="Voltar">‹</button>
+                <span class="av" style="background:linear-gradient(150deg,#B0714F,#834f33)">D</span>
+                <div class="who"><b>Daan Visser</b><div class="role" data-en="Real-estate agent · writes in Dutch 🇳🇱">Corretor · escreve em neerlandês 🇳🇱</div></div>
+              </div>
+              <div class="tp-thread">
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Hoi Sofia, ik ben Daan van Pijp Wonen. Het appartement aan de Govert Flinckstraat is nog beschikbaar — zullen we donderdag bezichtigen?</span>
+                  <span class="xlate"><span class="tx" data-en="Hi Sofia, I'm Daan from Pijp Wonen. The Govert Flinckstraat apartment is still available — shall we view it on Thursday?">Oi Sofia, sou o Daan da Pijp Wonen. O apartamento na Govert Flinckstraat ainda está disponível — vamos visitar na quinta?</span></span>
+                </div><span class="time">09:30</span></div>
+
+                <div class="msg me"><div class="bubble" data-en="Thursday works. Do I need to bring any documents?">Quinta funciona. Preciso levar algum documento?</div><span class="time">09:33</span></div>
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Alleen een identiteitsbewijs.</span>
+                  <span class="xlate"><span class="tx" data-en="Just an ID.">Só um documento de identidade.</span></span>
+                </div><span class="time">09:34</span></div>
+
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Wat is je maximale maandbudget? Ik heb nog een vergelijkbare optie in de buurt.</span>
+                  <span class="xlate"><span class="tx" data-en="What's your maximum monthly budget? I have another similar option nearby.">Qual é o seu orçamento máximo por mês? Tenho outra opção parecida na região.</span></span>
+                </div><span class="time">09:40</span></div>
+
+                <div class="msg me assisted"><div class="bubble" data-en-html="Up to <span data-eur='2180'></span>/mo (updated budget).">Até <span data-eur="2180"></span>/mês (orçamento atualizado).</div><span class="assisted-tag">◆ <span data-en="Answered by Liora · from your profile">Respondido pela Liora · do seu perfil</span></span></div>
+
+                <div class="msg them"><div class="bubble">
+                  <span class="said">Top — ik neem beide opties mee naar de bezichtiging van donderdag.</span>
+                  <span class="xlate"><span class="tx" data-en="Great — I'll bring both options to Thursday's viewing.">Ótimo — levo as duas opções para a visita de quinta.</span></span>
+                </div><span class="time">09:41</span></div>
+              </div>
+              <form class="composer" data-chat="generic">
+                <input type="text" placeholder="Responda ao Daan (em PT)…" data-ph-en="Reply to Daan (in PT)…" aria-label="Mensagem">
+                <button type="submit" class="send" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

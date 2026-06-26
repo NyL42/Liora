@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liora — Imóveis</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="layout">
+    <div id="sidebar" data-page="listings"></div>
+    <main class="main">
+      <div id="appbar" data-title="Imóveis" data-title-en="Listings"
+           data-sub="Opções nos seus bairros compatíveis" data-sub-en="Options in your matched areas"></div>
+
+      <div class="content">
+
+        <div class="listings-head">
+          <div class="lh-sub" data-en="6 listings matched to your profile across 3 areas. Prices in the original currency — use the Currency toggle up top to convert them all.">6 imóveis compatíveis com o seu perfil em 3 bairros. Preços na moeda original — use o toggle de Moeda no topo para converter todos.</div>
+        </div>
+
+        <div class="filters">
+          <button class="chip on" data-filter="all" data-en="All">Todos</button>
+          <button class="chip" data-filter="depijp">De Pijp</button>
+          <button class="chip" data-filter="oudwest">Oud-West</button>
+          <button class="chip" data-filter="westerpark">Westerpark</button>
+        </div>
+
+        <div class="listings-grid">
+
+          <div class="lcard" data-area="depijp" data-href="listing.html">
+            <div class="lc-shot" style="background:linear-gradient(135deg,#c2b393,#7d7c6c)">
+              <span class="lc-tag"><span class="dot"></span><span data-en="Available">Disponível</span></span>
+              <span class="lc-score">92%</span>
+            </div>
+            <div class="lc-body">
+              <span class="lc-price"><span data-eur="1850"></span><span class="per" data-en="/mo">/mês</span></span>
+              <div class="lc-name" data-en="Bright 2-bed with a work corner">Luminoso de 2 quartos com cantinho de trabalho</div>
+              <div class="lc-area">Govert Flinckstraat · De Pijp</div>
+              <div class="lc-specs"><span data-en="2 bed">2 quartos</span><span>68 m²</span><span data-en="2nd floor">2º andar</span></div>
+              <span class="lc-go"><span data-en="View listing">Ver imóvel</span><span class="arr">→</span></span>
+            </div>
+          </div>
+
+          <div class="lcard" data-area="depijp" data-href="listing.html">
+            <div class="lc-shot" style="background:linear-gradient(135deg,#bfb59a,#8c8b76)">
+              <span class="lc-tag"><span class="dot"></span><span data-en="Available">Disponível</span></span>
+              <span class="lc-score">90%</span>
+            </div>
+            <div class="lc-body">
+              <span class="lc-price"><span data-eur="1650"></span><span class="per" data-en="/mo">/mês</span></span>
+              <div class="lc-name" data-en="Quiet 1-bed near the market">1 quarto tranquilo perto da feira</div>
+              <div class="lc-area">Eerste Sweelinckstraat · De Pijp</div>
+              <div class="lc-specs"><span data-en="1 bed">1 quarto</span><span>52 m²</span><span data-en="3rd floor">3º andar</span></div>
+              <span class="lc-go"><span data-en="View listing">Ver imóvel</span><span class="arr">→</span></span>
+            </div>
+          </div>
+
+          <div class="lcard" data-area="oudwest" data-href="listing.html">
+            <div class="lc-shot" style="background:linear-gradient(135deg,#c8bda0,#9aa085)">
+              <span class="lc-tag"><span class="dot"></span><span data-en="Available">Disponível</span></span>
+              <span class="lc-score">86%</span>
+            </div>
+            <div class="lc-body">
+              <span class="lc-price"><span data-eur="1980"></span><span class="per" data-en="/mo">/mês</span></span>
+              <div class="lc-name" data-en="Light 2-bed near Vondelpark">2 quartos luminoso perto do Vondelpark</div>
+              <div class="lc-area">Bellamystraat · Oud-West</div>
+              <div class="lc-specs"><span data-en="2 bed">2 quartos</span><span>70 m²</span><span data-en="1st floor">1º andar</span></div>
+              <span class="lc-go"><span data-en="View listing">Ver imóvel</span><span class="arr">→</span></span>
+            </div>
+          </div>
+
+          <div class="lcard" data-area="oudwest" data-href="listing.html">
+            <div class="lc-shot" style="background:linear-gradient(135deg,#cabd9f,#8f8d76)">
+              <span class="lc-tag"><span class="dot"></span><span data-en="Available">Disponível</span></span>
+              <span class="lc-score">84%</span>
+            </div>
+            <div class="lc-body">
+              <span class="lc-price"><span data-eur="1350"></span><span class="per" data-en="/mo">/mês</span></span>
+              <div class="lc-name" data-en="Bright studio on Kinkerstraat">Estúdio luminoso na Kinkerstraat</div>
+              <div class="lc-area">Kinkerstraat · Oud-West</div>
+              <div class="lc-specs"><span data-en="studio">estúdio</span><span>40 m²</span><span data-en="4th floor">4º andar</span></div>
+              <span class="lc-go"><span data-en="View listing">Ver imóvel</span><span class="arr">→</span></span>
+            </div>
+          </div>
+
+          <div class="lcard" data-area="westerpark" data-href="listing.html">
+            <div class="lc-shot" style="background:linear-gradient(135deg,#b9c0a4,#7f8a78)">
+              <span class="lc-tag"><span class="dot"></span><span data-en="Available">Disponível</span></span>
+              <span class="lc-score">81%</span>
+            </div>
+            <div class="lc-body">
+              <span class="lc-price"><span data-eur="1720"></span><span class="per" data-en="/mo">/mês</span></span>
+              <div class="lc-name" data-en="Green 2-bed by Westerpark">2 quartos verde junto ao Westerpark</div>
+              <div class="lc-area">Spaarndammerstraat · Westerpark</div>
+              <div class="lc-specs"><span data-en="2 bed">2 quartos</span><span>75 m²</span><span data-en="ground">térreo</span></div>
+              <span class="lc-go"><span data-en="View listing">Ver imóvel</span><span class="arr">→</span></span>
+            </div>
+          </div>
+
+          <div class="lcard" data-area="westerpark" data-href="listing.html">
+            <div class="lc-shot" style="background:linear-gradient(135deg,#c4c2a2,#888d72)">
+              <span class="lc-tag"><span class="dot"></span><span data-en="Available">Disponível</span></span>
+              <span class="lc-score">79%</span>
+            </div>
+            <div class="lc-body">
+              <span class="lc-price"><span data-eur="2200"></span><span class="per" data-en="/mo">/mês</span></span>
+              <div class="lc-name" data-en="Spacious 3-bed for studio + home">3 quartos espaçoso para ateliê + casa</div>
+              <div class="lc-area">Van Hallstraat · Westerpark</div>
+              <div class="lc-specs"><span data-en="3 bed">3 quartos</span><span>92 m²</span><span data-en="2nd floor">2º andar</span></div>
+              <span class="lc-go"><span data-en="View listing">Ver imóvel</span><span class="arr">→</span></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // navegar ao detalhe (exceto ao clicar no botao de converter moeda)
+    document.querySelectorAll(".lcard").forEach(card =>
+      card.addEventListener("click", e => {
+        if (e.target.closest(".conv-toggle")) return;
+        const href = card.dataset.href; if (href) location.href = href;
+      }));
+    // filtros por bairro
+    document.querySelectorAll(".filters .chip").forEach(chip =>
+      chip.addEventListener("click", () => {
+        document.querySelectorAll(".filters .chip").forEach(c => c.classList.remove("on"));
+        chip.classList.add("on");
+        const f = chip.dataset.filter;
+        document.querySelectorAll(".lcard").forEach(card =>
+          card.style.display = (f === "all" || card.dataset.area === f) ? "" : "none");
+      }));
+  </script>
+</body>
+</html>

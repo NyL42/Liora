@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liora — Imóvel</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="layout">
+    <div id="sidebar" data-page="listings"></div>
+    <main class="main">
+      <div id="appbar" data-title="Imóvel" data-title-en="Listing"
+           data-sub="De Pijp · 2 quartos" data-sub-en="De Pijp · 2 bedrooms"></div>
+
+      <div class="content">
+        <a href="listings.html" class="pro-link" style="display:inline-flex;margin-bottom:18px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);text-decoration:none;align-items:center;gap:7px">‹ <span data-en="All listings">Todos os imóveis</span></a>
+        <div class="listing-grid">
+
+          <section>
+            <div class="gallery">
+              <div class="hero-shot" style="--shot-a:linear-gradient(135deg,#c2b393 0%,#9aa085 55%,#7d7c6c 100%)">
+                <span class="tag"><span class="dot"></span><span data-en="Available">Disponível</span></span>
+                <div class="shot-cap" data-en="Living room with canal-facing windows · De Pijp">Sala com janelas para o canal · De Pijp</div>
+              </div>
+              <div class="thumbs">
+                <div class="thumb" style="background:linear-gradient(135deg,#b7a988,#9c9a82)"></div>
+                <div class="thumb" style="background:linear-gradient(135deg,#cfc3a6,#a9a98e)"></div>
+                <div class="thumb" style="background:linear-gradient(135deg,#9fa890,#7f8a78)"></div>
+                <div class="thumb" style="background:linear-gradient(135deg,#c9b89a,#b0a07f)"></div>
+              </div>
+            </div>
+
+            <div class="listing-head">
+              <div class="price-row">
+                <span class="price"><span data-eur="1850"></span><span class="per" data-en="/month">/mês</span></span>
+              </div>
+              <h1 data-en="Bright 2-bedroom apartment with a work corner">Apartamento luminoso de 2 quartos com cantinho de trabalho</h1>
+              <div class="addr">Govert Flinckstraat 212 · De Pijp, Amsterdã 🇳🇱</div>
+            </div>
+
+            <div class="spec-row">
+              <div class="spec"><span class="sv">2</span><span class="sl" data-en="Bedrooms">Quartos</span></div>
+              <div class="spec"><span class="sv">1</span><span class="sl" data-en="Bath">Banheiro</span></div>
+              <div class="spec"><span class="sv">68 m²</span><span class="sl" data-en="Floor area">Área</span></div>
+              <div class="spec"><span class="sv">2º</span><span class="sl" data-en="Floor">Andar</span></div>
+              <div class="spec"><span class="sv">1901</span><span class="sl" data-en="Built">Construído</span></div>
+            </div>
+
+            <div class="listing-prose">
+              <p data-en="A bright second-floor flat in a classic De Pijp building, two blocks from the Albert Cuyp market. The second bedroom is set up as a quiet work corner — exactly the space Sofia asked for.">Um apartamento luminoso no segundo andar de um prédio clássico de De Pijp, a duas quadras da feira Albert Cuyp. O segundo quarto está montado como um cantinho de trabalho silencioso — exatamente o espaço que a Sofia pediu.</p>
+              <div class="feature-chips">
+                <span>◆ <span data-en="Part-furnished">Mobiliado parcial</span></span>
+                <span>◆ <span data-en="Fiber 1 Gbps">Fibra 1 Gbps</span></span>
+                <span>◆ <span data-en="Bike storage">Bicicletário</span></span>
+                <span>◆ <span data-en="Pets ok">Animais ok</span></span>
+                <span>◆ <span data-en="Central heating">Aquecimento central</span></span>
+              </div>
+            </div>
+
+            <div class="map-panel" style="margin-top:26px">
+              <div class="map-bar">
+                <div class="mb-title"><b data-en="Where it sits">Onde fica</b><span class="sub" data-en="2 min to the market">2 min até a feira</span></div>
+              </div>
+              <div id="mini-map" class="map-el" style="height:300px"></div>
+              <div class="map-fallback"><div data-en="Map loads from the provider — Apple MapKit JS / Google Maps in production.">O mapa carrega do provedor — Apple MapKit JS / Google Maps em produção.</div></div>
+            </div>
+          </section>
+
+          <!-- ASK-DOCK CHATBOT -->
+          <aside class="ask-dock" data-ask>
+            <div class="ask-head">
+              <div class="ah-top"><div class="bot-ava">L</div><b data-en="Ask about this listing">Pergunte sobre este imóvel</b></div>
+              <div class="ah-sub" data-en="Listing data, the surrounding area, and tenancy law — reviewed by Liora's legal team. Answered before you reach any agent.">Dados do anúncio, a zona envolvente, e a lei do arrendamento — revistos pela equipe jurídica da Liora. Respondidos antes de chegar a qualquer corretor.</div>
+            </div>
+            <div class="ask-thread" id="ask-thread">
+              <div class="msg them"><div class="bubble" data-en="Hi! I can answer anything about this apartment or the area — listing data, the neighbourhood, and legal questions. What would you like to know?">Olá! Posso responder qualquer coisa sobre este apartamento ou a região — dados do anúncio, o bairro, e questões legais. O que quer saber?</div><span class="time">14:30</span></div>
+            </div>
+            <div class="suggest">
+              <button data-en="Any schools nearby?">Tem escolas por perto?</button>
+              <button data-en="How's the transit?">Como é o transporte?</button>
+              <button data-en="What's the deposit?">Qual o depósito?</button>
+              <button data-en="Are pets allowed?">Posso ter animais?</button>
+              <button data-en="Cafés to work from?">Cafés para trabalhar?</button>
+            </div>
+            <form class="composer" data-chat="listing" data-thread="#ask-thread">
+              <input type="text" placeholder="Pergunte sobre o imóvel…" data-ph-en="Ask about the listing…" aria-label="Pergunta">
+              <button type="submit" class="send" aria-label="Enviar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+            </form>
+          </aside>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/map.js"></script>
+</body>
+</html>

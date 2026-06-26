@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liora — Explorar</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="layout">
+    <div id="sidebar" data-page="explore"></div>
+    <main class="main">
+      <div id="appbar" data-title="Explorar" data-title-en="Explore"
+           data-sub="Bairros compatíveis · Amsterdã" data-sub-en="Matched areas · Amsterdam"></div>
+
+      <div class="content">
+        <div class="map-split">
+
+          <div class="match-list">
+
+            <article class="match-card sel" data-area="depijp">
+              <div class="mc-top"><div><h3>De Pijp</h3><div class="city">Amsterdã 🇳🇱</div></div><span class="score">92%</span></div>
+              <p class="why" data-en="Dense street life, a daily market, dozens of cafés to work from and Sarphatipark 4 minutes away.">Vida de rua densa, feira diária, dezenas de cafés para trabalhar e o Sarphatipark a 4 min.</p>
+              <div class="match-bars">
+                <div class="match-bar"><span class="lbl" data-en="Mobility">Mobilidade</span><span class="track"><span class="fill" style="width:95%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Cafés">Cafés</span><span class="track"><span class="fill" style="width:92%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Green">Verde</span><span class="track"><span class="fill" style="width:80%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Transit">Transporte</span><span class="track"><span class="fill" style="width:88%"></span></span></div>
+              </div>
+            </article>
+
+            <article class="match-card" data-area="oudwest">
+              <div class="mc-top"><div><h3>Oud-West</h3><div class="city">Amsterdã 🇳🇱</div></div><span class="score">86%</span></div>
+              <p class="why" data-en="The same energy, a little quieter. Excellent for cafés, with less immediate green space.">A mesma energia, um pouco mais calmo. Excelente para cafés, com menos verde imediato.</p>
+              <div class="match-bars">
+                <div class="match-bar"><span class="lbl" data-en="Mobility">Mobilidade</span><span class="track"><span class="fill" style="width:88%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Cafés">Cafés</span><span class="track"><span class="fill" style="width:90%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Green">Verde</span><span class="track"><span class="fill" style="width:72%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Transit">Transporte</span><span class="track"><span class="fill" style="width:84%"></span></span></div>
+              </div>
+            </article>
+
+            <article class="match-card" data-area="westerpark">
+              <div class="mc-top"><div><h3>Westerpark</h3><div class="city">Amsterdã 🇳🇱</div></div><span class="score">81%</span></div>
+              <p class="why" data-en="More green and space, great for running; café life is a little more spread out.">Mais verde e espaço, ótimo para correr; a vida de café é um pouco mais espalhada.</p>
+              <div class="match-bars">
+                <div class="match-bar"><span class="lbl" data-en="Mobility">Mobilidade</span><span class="track"><span class="fill" style="width:82%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Cafés">Cafés</span><span class="track"><span class="fill" style="width:70%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Green">Verde</span><span class="track"><span class="fill" style="width:95%"></span></span></div>
+                <div class="match-bar"><span class="lbl" data-en="Transit">Transporte</span><span class="track"><span class="fill" style="width:76%"></span></span></div>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="map-panel">
+            <div class="map-bar">
+              <div class="mb-title">
+                <b id="map-area-name">De Pijp</b>
+                <span class="sub" data-en="Curated for her profile">Curado para o perfil dela</span>
+              </div>
+              <div class="map-legend">
+                <span class="lg"><span class="pin" style="background:#2B2722"></span><span data-en="Home">Imóvel</span></span>
+                <span class="lg"><span class="pin" style="background:#9A7B45"></span><span data-en="Café">Café</span></span>
+                <span class="lg"><span class="pin" style="background:#5A6B57"></span><span data-en="Green">Verde</span></span>
+                <span class="lg"><span class="pin" style="background:#6E7E8A"></span><span data-en="Transit">Transporte</span></span>
+                <span class="lg"><span class="pin" style="background:#B0714F"></span><span data-en="Market">Feira</span></span>
+                <span class="lg"><span class="pin" style="background:#7E6A86"></span><span data-en="Studio">Estúdio</span></span>
+              </div>
+            </div>
+            <div id="map" class="map-el"></div>
+            <div class="map-fallback">
+              <div><b data-en="Map needs a connection.">O mapa precisa de conexão.</b><br>
+              <span data-en="In production this runs on Apple MapKit JS or Google Maps Platform.">Em produção, roda em Apple MapKit JS ou Google Maps Platform.</span></div>
+            </div>
+            <div class="map-note" data-en="Pick an area on the left and the map moves with you. Points filtered by Sofia's mobility and work profile. In production: Apple MapKit JS or Google Maps Platform.">Escolha um bairro à esquerda e o mapa acompanha. Pontos filtrados pelo perfil de mobilidade e trabalho da Sofia. Em produção: Apple MapKit JS ou Google Maps Platform.</div>
+          </div>
+
+        </div>
+
+        <div class="rule-divider"><span data-en="Cost of living">Custo de vida</span></div>
+
+        <div class="col-strip">
+          <div class="col-cell"><div class="cl" data-en="Rent · 2-bed">Aluguel · 2 quartos</div><div class="cv"><span data-eur="1850"></span></div><div class="alt" data-en="/ month · 7-day avg">/ mês · média 7 dias</div></div>
+          <div class="col-cell"><div class="cl" data-en="Utilities">Despesas</div><div class="cv"><span data-eur="120"></span></div><div class="alt" data-en="/ month">/ mês</div></div>
+          <div class="col-cell"><div class="cl" data-en="Transit pass">Passe de transporte</div><div class="cv"><span data-eur="98"></span></div><div class="alt" data-en="/ month">/ mês</div></div>
+          <div class="col-cell"><div class="cl" data-en="Groceries">Supermercado</div><div class="cv"><span data-eur="310"></span></div><div class="alt" data-en="/ month, est.">/ mês, est.</div></div>
+        </div>
+
+        <div class="callout" style="margin-top:22px">
+          <span class="ico">⇄</span>
+          <p data-en="<b>Original or converted — one switch.</b> Prices show the market value in euros. Flip the <b>Currency</b> toggle at the top to convert every price on every page to your currency at once. Your currency is set in your profile."><b>Original ou convertido — um só botão.</b> Os preços mostram o valor de mercado em euros. Vire o toggle de <b>Moeda</b> no topo para converter todos os preços, em todas as páginas, de uma vez para a sua moeda. A sua moeda é definida no perfil.</p>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/app.js"></script>
+  <script src="assets/map.js"></script>
+  <script>
+    document.querySelectorAll(".match-card").forEach(card =>
+      card.addEventListener("click", () => {
+        document.querySelectorAll(".match-card").forEach(x => x.classList.remove("sel"));
+        card.classList.add("sel");
+        if (window.LioraMap) window.LioraMap.show(card.dataset.area);
+      }));
+  </script>
+</body>
+</html>
